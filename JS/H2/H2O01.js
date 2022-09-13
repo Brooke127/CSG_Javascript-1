@@ -16,8 +16,8 @@ function setup() {
 }
 
 function draw() {
-  //background(kater);  
-  image(katerKlein,0,0);
+  background('grey');  
+  image(kater,100,200);
   keverX+=random(-5,5);
   keverY+=random(-5,5);
   // image(kever,keverX,keverY);
