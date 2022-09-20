@@ -14,7 +14,6 @@ function setup() {
   vierkanten.shift();
   noLoop();
 }
-
 function draw() {
   for (var teller = 0;teller < vierkanten.length;teller++) {
     fill('white');
