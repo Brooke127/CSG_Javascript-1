@@ -10,7 +10,7 @@ function setup() {
   canvas = createCanvas(450,450);
   canvas.parent('processing');
   textFont("Georgia");
-  textSize(18);
+ // textSize(18);
   noStroke();
   foto.loadPixels();
 }
