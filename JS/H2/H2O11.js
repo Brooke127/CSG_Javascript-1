@@ -14,23 +14,30 @@ function setup() {
   canvas = createCanvas(250,100);
   canvas.parent('processing');
   noStroke();
-  frameRate(5);
+  frameRate(1);
   textFont("Georgia");
   textSize(18);
   breedte = animatie[0].width;
   hoogte = animatie[0].height;
 }
 
+
+
 function draw() {
   background('lavender');
-
-  image(animatie[nummer],150,0,2*breedte,2*hoogte);
-  nummer++;
-
-  if (nummer == aantalBeeldjes) {
-    nummer = 0;
-  }
-
+  nummer = frameCount % aantalBeeldjes;
+  image(animatie[nummer],150,0,breedte,hoogte);
   text("frameCount=" + frameCount,5,40);
   text("nummer=" + nummer,5,70);
-}
+ }
+
+ //function draw() {
+ // background('lavender');
+ // image(animatie[nummer],150,0,2*breedte,2*hoogte);
+//  nummer++;
+ // if (nummer == aantalBeeldjes) {
+  //  nummer = 0;
+//  }
+ // text("frameCount=" + frameCount,5,40);
+ // text("nummer=" + nummer,5,70);
+//}

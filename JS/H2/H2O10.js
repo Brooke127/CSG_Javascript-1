@@ -13,17 +13,19 @@ function setup() {
   canvas = createCanvas(460,460);
   canvas.parent('processing');
   noStroke();
-  frameRate(2);
+  frameRate(5);
   textFont("Georgia");
   textSize(18);
 }
 
 function draw() {
   background('lavender');
-  image(animatie[nummer],0,0);
+//  image(animatie[nummer],0,0);
+  image(animatie[nummer],80,160,300,300);
+
   nummer++;
 
-  if (nummer == aantalBeeldjes) {
+  if (nummer == aantalBeeldjes) { // hier 3 of de eerste aantal van 6 naar 3 doen.
     nummer = 0;
   }
   

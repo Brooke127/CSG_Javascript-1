@@ -14,11 +14,11 @@ function setup() {
 function draw() {
   tekenAchtergrond();
 
-  for (var n = 0; n <= huisNummers.length; n++){
-    tekenHuis(kleur, huisNummers[n], huisEigenaren[n]);
+  for (var n = 0;n < huisNummers.length; n++){
+    tekenHuis(kleur,huisNummers[n],huisEigenaren[n]);
     translate(150,0);
     if (kleur == 'lightgray') {
-      kleur = 'darkgray';
+      kleur = 'darkgrey';
     }
     else {
       kleur = 'lightgray';
