@@ -5,7 +5,7 @@ var breedte,hoogte;
 
 function preload() {
   for (var b = 0;b < aantalBeeldjes;b++) {
-    nieuw_beeldje = loadImage("images/sprites/wizard/opdracht_11A/"+ b +".png");
+    nieuw_beeldje = loadImage("images/sprites/wizard/opdracht_11B/frame("+ b +").png");
     animatie.push(nieuw_beeldje);
   }
 }
@@ -14,7 +14,7 @@ function setup() {
   canvas = createCanvas(250,100);
   canvas.parent('processing');
   noStroke();
-  frameRate(1);
+  frameRate(6);
   textFont("Georgia");
   textSize(18);
   breedte = animatie[0].width;

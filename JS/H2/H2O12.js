@@ -18,9 +18,24 @@ function setup() {
 
 function draw() {
   background('lavender');
-  background('white');
   image(animatie[nummer],0,0);
-  
+  if( mouseX > 306){
+   nummer = 4;
+  }
+  else if (mouseX < 153){
+    nummer = 3;
+  }
+  else {
+    if ( mouseY < 153){
+    nummer = 1;
+    }
+    else if ( mouseY > 306) {
+      nummer = 0;
+    }
+    else {
+      nummer = 5;
+    }
+  }
   // straal van de neus is 180
 
 }
