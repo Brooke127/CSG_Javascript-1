@@ -1,0 +1,43 @@
+
+ //if (keyIsDown(UP_ARROW)){
+   //   this.y -= this.stap;
+   // }
+
+   // if (keyIsDown(DOWN_ARROW)){
+   //   this.y += this.stap;
+   // }
+
+   // this.straal = this.l /= 2; 
+
+   
+ // spring() {
+ //   if (!this.aanHetSpringen) {
+  //    this.aanHetSpringen = true;
+  //    this.snelheid = -this.springSnelheid;
+  //  }
+ // }
+
+ //if ( this.x ){
+//}
+
+
+ // standon(){
+   // var standingon = false;
+    
+
+   // if (standingon) {
+   //   this.kleur = 'aquamarine';
+   // }
+   // else {
+  //    this.kleur = 'turqouise';
+   // }
+   // return standingon;
+  // }
+
+
+
+
+
+
+
+

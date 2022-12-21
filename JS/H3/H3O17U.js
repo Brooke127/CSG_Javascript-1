@@ -4,7 +4,7 @@
     ********************************************************** */
 
 
-class Auto {
+class Auto { //hero
   constructor(g) {
     this.schaal = 0.75
     this.x = g * (1 - this.schaal)/2;
@@ -42,12 +42,12 @@ class Auto {
     ********************************************************** */
 
 
-class Cel {
+class Cel { //
   constructor(x,y,l) {
     this.x = x;
     this.y = y;
     this.l = l;
-    this.kleur = 0;
+    this.kleur = 0; 
   }
 
   wordtGeraakt(s) {

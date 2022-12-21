@@ -8,6 +8,12 @@ class Vis {
   
   zwem() {
     this.x += this.snelheid;
+    if(keyIsDown(UP_ARROW)){
+      this.y -= this.snelheid;
+    }
+    if(keyIsDown(DOWN_ARROW)){
+      this.y += this.snelheid;
+    }
   }
   
   eet(p) {
@@ -80,6 +86,8 @@ function draw() {
   if (gup.eet(garnaal)) {
     gup.x = -170;
     gup.gegeten++;
+    garnaal.y = random(100,500);
+    gup.snelheid += 3;
   }
   if (gup.x > 800) {
     background('red');

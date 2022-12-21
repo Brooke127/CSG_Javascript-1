@@ -32,16 +32,29 @@ class Speler {
   }
   
   verwerkInvoer() {
-    if (keyIsDown(LEFT_ARROW))
+    if (keyIsDown(LEFT_ARROW) || keyIsDown(65))    //try different button maybe wasd
     {
       this.x -= this.stap;
     }
-    if (keyIsDown(RIGHT_ARROW))
+    if (keyIsDown(RIGHT_ARROW) || keyIsDown(68))
     {
       this.x += this.stap;
     }    
   
-    if (keyIsDown(32)) {
+    if (keyIsDown(32) || keyIsDown(87)) {
+      this.spring();
+    }
+
+    if (keyIsDown(65))    //try different button maybe wasd
+    {
+      this.x -= this.stap;
+    }
+    if (keyIsDown(68))
+    {
+      this.x += this.stap;
+    }    
+  
+    if (keyIsDown(87)) {
       this.spring();
     }
   }

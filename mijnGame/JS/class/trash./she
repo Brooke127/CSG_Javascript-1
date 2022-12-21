@@ -1,0 +1,39 @@
+    if (!this.actief) {
+      this.beginScherm();
+    }
+    else {
+      for (var r = 0; r < this.parcours.length; r++) {
+        this.parcours[r].teken();
+      }
+    this.speler.teken();
+    if (this.levelGehaald == true){
+      this.levelScherm
+    }
+      if (this.afgelopen) {
+        this.eindScherm();
+      }
+    }
+
+
+
+
+    if (!this.actief) {
+      if(this.afgelopen){
+        this.eindScherm();
+      }
+      else {
+        this.beginScherm();
+    }
+  }
+    else {
+      for (var r = 0; r < this.parcours.length; r++) {
+        this.parcours[r].teken();
+      }
+      if(this.levelGehaald ==true ){
+        this.levelscherm();
+      }
+    //  else{
+      //  this.tekenScorebord();
+        //this.tekenAnimatie();
+        //}
+      }

@@ -1,74 +1,51 @@
 class Hero {
-  constructor(x,v){
+  constructor(x){
     this.l = 50;
-    this.stap = 5;
-    this.x = x;    
-    this.y = null;
+    this.stap = 50;
+    this.x = x;   
+    this.y = canvas.height/2;
     this.g = 0,5;
-    this.kleur = null; //GEts indicated in the standingon function
-    this.snelheid = 0;
-    this.aanHetSpringen = false;
-    this.springSnelheid = v;
+    this.kleur = 'Aquamarine'; 
+  }
+
+  aangeraakt(x,y) {
+    if (dist(x,y,this.x + this.l/2,this.y + this.l/2) < this.l / 3) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 
   verwerkInvoer(){
     if (keyIsDown(LEFT_ARROW) || keyIsDown(65)){     // naar links bewegen
       this.x -= this.stap;
     }
+
     if (keyIsDown(RIGHT_ARROW) || keyIsDown(68)){    // naar rechts bewegen
       this.x += this.stap;
     }    
   
-    if (keyIsDown(32) || keyIsDown(87)) {            
-      this.spring();
+    if (keyIsDown(UP_ARROW) || keyIsDown(87)) {      // naar boven bewegen     
+      this.y -= this.stap;
+
     }
-
-    //if (keyIsDown(UP_ARROW)){
-   //   this.y -= this.stap;
-   // }
-
-   // if (keyIsDown(DOWN_ARROW)){
-   //   this.y += this.stap;
-   // }
-
-   // this.straal = this.l /= 2; 
-    this.x = constrain(this.x, 0, canvas.width - this.l);
-  //  this.y = constrain(this.y, 0, canvas.heigt - this.l);
-  
-  } 
-
-  spring() {
-    if (!this.aanHetSpringen) {
-      this.aanHetSpringen = true;
-      this.snelheid = -this.springSnelheid;
-    }
-  }
-
-
-
-
-  
- // standon(){
-   // var standingon = false;
     
+    if (keyIsDown(DOWN_ARROW) || keyIsDown(83)) {     // naar beneden bewegen         
+      this.y += this.stap;
 
-   // if (standingon) {
-   //   this.kleur = 'aquamarine';
-   // }
-   // else {
-  //    this.kleur = 'turqouise';
-   // }
-   // return standingon;
-  // }
-
+    }
+   
+    this.x = constrain(this.x, 0, canvas.width - this.l); //hero is always visible and can't hide
+    this.y = constrain(this.y, 0, canvas.height - this.l); //hero is always visible and can't hide
+  } 
 
 
   teken() {
     push();
-    noFill();
-    stroke(this.kleur);
-    strokeWeight(5);
-    ellipse(this.x+this.l/2, this.y+this.l/2 ,this.l);
+      noStroke();
+      fill(this.kleur);
+      ellipse(this.x+this.l/2, this.y+this.l/2 ,this.l);
     pop();
   }
 }
